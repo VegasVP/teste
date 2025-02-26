@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recebimentos de TI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="logo.webp" alt="Logo">
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="materiais.html">Materiais</a></li>            
+            <li><a href="entregas.html">Entregas</a></li>
+            <li style="background-color: #046d81;"><a href="recebimentos.html">Recebimentos</a></li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <h2>Recebimentos de Materiais de TI</h2>
+    </div>
+
+    <div class="content">
+        <button id="novoRecebimento" class="btn-novo">Novo Recebimento</button>
+        
+        <div class="table-container" id="formContainer">
+            <h3>Registrar Novo Recebimento</h3>
+            <form id="recebimentoForm">
+                <label for="descricao">Descrição do Material:</label>
+                <input type="text" id="descricao" name="descricao" required>
+                
+                <label for="notaFiscal">Nota Fiscal (PDF ou Imagem):</label>
+                <input type="file" id="notaFiscal" name="notaFiscal" accept=".pdf, .png, .jpg, .jpeg">
+                
+                <label for="fotoMaterial">Foto do Material:</label>
+                <input type="file" id="fotoMaterial" name="fotoMaterial" accept="image/*">
+                
+                <button type="submit">Salvar Recebimento</button>
+            </form>
+        </div>
+
+        <div class="table-container">
+            <h3>Histórico de Recebimentos</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descrição</th>
+                        <th>Nota Fiscal</th>
+                        <th>Foto</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody id="recebimentosList">
+                    <!-- Os dados serão preenchidos dinamicamente -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("recebimentoForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Recebimento registrado com sucesso!");
+            document.getElementById("formContainer").style.display = "none";
+            document.getElementById("novoRecebimento").style.display = "block";
+        });
+
+        document.getElementById("novoRecebimento").addEventListener("click", function() {
+            document.getElementById("formContainer").style.display = "block";
+            document.getElementById("novoRecebimento").style.display = "none";
+        });
+    </script>
+</body>
+</html>

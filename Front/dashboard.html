@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="logo.webp" alt="logo">
+        <ul>
+            <li style="background-color: #046d81;">Dashboard</li>
+            <li><a href="materiais.html">Materiais</a></li>
+            <li><a href="entregas.html">Entregas</a></li>
+            <li><a href="recebimentos.html">Recebimentos</a></li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <h2>Dashboard</h2>
+    </div>
+
+    <div class="content">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Recebimentos', 'Entregas'],
+                datasets: [{
+                    label: 'Quantidade',
+                    data: [10, 7],
+                    backgroundColor: ['blue', 'green']
+                }]
+            }
+        });
+    </script>
+</body>
+</html>

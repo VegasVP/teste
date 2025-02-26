@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiais e Entregas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="logo.webp" alt="Logo">
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li style="background-color: #046d81;"><a href="materiais.html">Materiais</a></li>
+            <li><a href="entregas.html">Entregas</a></li>
+            <li><a href="recebimentos.html">Recebimentos</a></li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <h2>Gerenciamento de Materiais e Entregas</h2>
+    </div>
+
+    <div class="content">
+        <div class="table-container">
+            <h3>Lista de Materiais</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Quantidade</th>
+                        <th>Data de Entrada</th>
+                    </tr>
+                </thead>
+                <tbody id="materiaisList">
+                    <!-- Dados dinâmicos aqui -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+            <h3>Histórico de Entregas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Destinatário</th>
+                        <th>Item</th>
+                        <th>Data da Entrega</th>
+                    </tr>
+                </thead>
+                <tbody id="entregasList">
+                    <!-- Dados dinâmicos aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
